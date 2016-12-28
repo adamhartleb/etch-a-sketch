@@ -1,11 +1,12 @@
 $(document).ready(function () {
 	function gridSize (num) {
 		$(".grid").remove();
-		var i = 0;
-		while (i < (num*num)) {
-			$(".etch-wrapper").append("<div class='grid'></div>");
-			i++;
+		var	cnt = num * num;
+		var	str = '';
+		while (cnt--) {
+			str += "<div class='grid'></div>";
 		}
+		$(".etch-wrapper").append(str);
 
 		$(".grid").css({
 			width: 960 / num,
